@@ -3,11 +3,13 @@ import camp.nextstep.edu.missionutils.Console;
 import java.util.List;
 
 public class Game {
-    private static final int CODE_LENGTH = 3;
+    private static final int NUMBER_LENGTH = 3;
     private static final String NEW_GAME = "1";
     private static final String END_GAME = "2";
 
-    public boolean PlayGame(List<Integer> numbers) {
+    private static final String IllException = "숫자는 세 개만 입력 가능합니다.";
+
+    public boolean playGame(List<Integer> numbers) {
             while(true) {
                 int strike = 0;
                 int ball = 0;
@@ -67,8 +69,8 @@ public class Game {
     }
 
     private void ValidationNumbers(String chooseNumbers) {
-        if(chooseNumbers.length() != CODE_LENGTH) {
-            throw new IllegalArgumentException("세가지 숫자가 아님!");
+        if(chooseNumbers.length() != NUMBER_LENGTH) {
+            throw new IllegalArgumentException(IllException);
         }
     }
 }

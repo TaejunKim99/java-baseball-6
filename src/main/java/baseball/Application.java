@@ -12,9 +12,9 @@ public class Application {
         System.out.println("숫자 야구 게임을 시작합니다.");
         Computer computer = new Computer();
         Game game = new Game();
-        boolean reStart = game.PlayGame(computer.ComputerNumber());
+        boolean reStart = game.playGame(computer.ComputerNumber());
         if(reStart) {
-            game.PlayGame(computer.ComputerNumber());
+            game.playGame(computer.ComputerNumber());
         }
         Console.close();
     }
